@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.RadialGradient;
 import android.graphics.Rect;
 import android.graphics.Shader;
+import android.util.AttributeSet;
 import android.view.View;
 
 class CircleView extends View {
@@ -19,9 +20,22 @@ class CircleView extends View {
 	private RadialGradient mRadialGradient;
 	private Rect mRect;
 
+	/**
+	 * @see android.view.View#View(android.content.Context,
+	 *      android.util.AttributeSet)
+	 */
+	public CircleView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		initView();
+	}
+
 	public CircleView(Context context) {
 		super(context);
 		setFocusable(true);
+		initView();
+	}
+
+	private void initView() {
 		mPaint = new Paint();
 		mPaint.setAntiAlias(true);
 		mPaint.setDither(true);
@@ -57,6 +71,7 @@ class CircleView extends View {
 				}
 			};
 		}.start();
+
 	}
 
 	int r = 100;
@@ -65,11 +80,11 @@ class CircleView extends View {
 	protected void onDraw(Canvas canvas) {
 		canvas.drawColor(Color.WHITE);
 		canvas.clipRect(0, 0, 400, 400);
-		mRadialGradient = new RadialGradient(200, 200, 50, new int[] {
-				Color.TRANSPARENT, 0x112694D3, 0x992694D3, 0x222694D3 },
-				new float[] { 0f, 0.7f, 0.95f, 1f }, Shader.TileMode.REPEAT);
+		// mRadialGradient = new RadialGradient(200, 200, 50, new int[] {
+		// Color.TRANSPARENT, 0x112694D3, 0x992694D3, 0x222694D3 },
+		// new float[] { 0f, 0.7f, 0.95f, 1f }, Shader.TileMode.REPEAT);
 		// mPaint.setMaskFilter(mBlur);
-		mPaint.setShader(mRadialGradient);
+		// mPaint.setShader(mRadialGradient);
 		canvas.drawCircle(200, 200, r, mPaint);
 	}
 }

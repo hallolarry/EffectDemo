@@ -1,0 +1,12 @@
+<resources>
+
+    <declare-styleable name="RoundView">
+        <attr name="colorCircle" format="color" />
+        <attr name="colorArc" format="color" />
+        <attr name="colorText" format="color" />
+        <attr name="text" format="string" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+
+</resources>
