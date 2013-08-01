@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circleview="http://schemas.android.com/apk/res/larry.effectdemo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <larry.effectdemo.CircleView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:text="载入中..."
+        android:textColor="#FF444444"
+        android:textSize="20sp"
+        circleview:colorArc="#FFED3246"
+        circleview:colorCircle="#FFDFDFDF"
+        circleview:strokeWidth="1dp" />
+
+</FrameLayout>

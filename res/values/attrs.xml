@@ -1,12 +1,12 @@
 <resources>
 
-    <declare-styleable name="RoundView">
+    <declare-styleable name="CircleView">
         <attr name="colorCircle" format="color" />
         <attr name="colorArc" format="color" />
-        <attr name="colorText" format="color" />
-        <attr name="text" format="string" />
         <attr name="strokeWidth" format="dimension" />
-        <attr name="textSize" format="dimension" />
+        <attr name="android:textColor" />
+        <attr name="android:text" />
+        <attr name="android:textSize" />
     </declare-styleable>
 
 </resources>
